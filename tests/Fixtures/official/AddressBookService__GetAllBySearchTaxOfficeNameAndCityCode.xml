@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model.DataContract.AddressBook">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetAllBySearchTaxOfficeNameAndCityCode>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <eın:CityCode>06</eın:CityCode>
+            <!--Optional:-->
+            <eın:TaxOfficeName>Çankaya</eın:TaxOfficeName>
+         </tem:request>
+      </tem:GetAllBySearchTaxOfficeNameAndCityCode>
+   </soapenv:Body>
+</soapenv:Envelope>

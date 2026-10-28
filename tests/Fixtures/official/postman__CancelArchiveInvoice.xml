@@ -1,0 +1,17 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:CancelArchiveInvoice>
+         <tem:request>
+            <eın:ArchiveInvoiceList>
+               <eın:ArchiveInvoiceCancellation>
+                  <eın:CancellationReason>iptal edildi.</eın:CancellationReason>
+                  <eın:ETTN>26765aaa-ec86-4473-aca6-4ea3f0e6f56f</eın:ETTN>
+               </eın:ArchiveInvoiceCancellation>
+            </eın:ArchiveInvoiceList>
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+            <eın:CompanyVendorNumber></eın:CompanyVendorNumber>
+         </tem:request>
+      </tem:CancelArchiveInvoice>
+   </soapenv:Body>
+</soapenv:Envelope>

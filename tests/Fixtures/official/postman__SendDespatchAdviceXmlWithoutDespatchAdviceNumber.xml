@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SendDespatchAdviceXmlWithoutDespatchAdviceNumber>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <eın:CompanyVendorNumber></eın:CompanyVendorNumber>
+            <!--Optional:-->
+            <eın:DespatchAdvices>
+               <!--Zero or more repetitions:-->
+               <eın:DespatchAdviceXml>
+                  <!--Optional:-->
+                  <eın:DespatchAdviceContent>{{XmlB64}}</eın:DespatchAdviceContent>
+                  <!--Optional:-->
+                  <eın:ReceiverTag>{{ReceiverInboxTag}}</eın:ReceiverTag>
+               </eın:DespatchAdviceXml>
+            </eın:DespatchAdvices>
+         </tem:request>
+      </tem:SendDespatchAdviceXmlWithoutDespatchAdviceNumber>
+   </soapenv:Body>
+</soapenv:Envelope>

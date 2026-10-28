@@ -1,0 +1,266 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/"
+   xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model"
+   xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header />
+   <soapenv:Body>
+      <tem:SendDespatchAdvice>
+         
+         <tem:request>
+            
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+            
+            <eın:DespatchAdvices>
+               <!--Zero or more repetitions:-->
+               <eın:DespatchAdvice>
+                  <eın:CurrencyCode>TRY</eın:CurrencyCode>
+                  <eın:DeliveryCustomerParty>
+                     <eın:Address>
+                        
+                        <eın:BoulevardAveneuStreetName>Maltepe Mahallesi Gençlik Caddesi No:107 Çankaya / ANKARA 06570</eın:BoulevardAveneuStreetName>
+                        
+                        <eın:BuildingNumber>107</eın:BuildingNumber>
+                        
+                        <eın:CityCode>06</eın:CityCode>
+                        
+                        <eın:CityName>Ankara</eın:CityName>
+                        
+                        <eın:EMail>destek@luca.com.tr</eın:EMail>
+                        
+                        
+                        <eın:PostalCode>06570</eın:PostalCode>
+                        
+                        <eın:TaxOfficeCode>0</eın:TaxOfficeCode>
+                        
+                        <eın:TaxOfficeName>ANKARA KURUMLAR VERGİ DAİRESİ</eın:TaxOfficeName>
+                        
+                        <eın:TelephoneNumber>312 000 00 00</eın:TelephoneNumber>
+                        
+                        <eın:TownCode>0</eın:TownCode>
+                        
+                        <eın:TownName>ÇANKAYA</eın:TownName>
+                        
+                     </eın:Address>
+                     
+                     <eın:ExternalReceiverCode>{{ExternalInvoiceCode}}</eın:ExternalReceiverCode>
+                     
+                     <eın:ReceiverName>TEST ISNET</eın:ReceiverName>
+                     
+                     <eın:ReceiverTaxCode>{{ReceiverTaxCode}}</eın:ReceiverTaxCode>
+                  </eın:DeliveryCustomerParty>
+                                    <eın:DespatchAdditionalIdentityInfo>
+                     
+                     <eın:ShipmentNo>SE-1221312</eın:ShipmentNo>
+                  </eın:DespatchAdditionalIdentityInfo>
+                  <eın:DespatchAdviceDate>{{InvoiceDate}}</eın:DespatchAdviceDate>
+                  
+                  <eın:DespatchAdviceDetails>
+                     <!--Zero or more repetitions:-->
+                     <eın:DespatchAdviceDetail>
+                        
+                        <eın:CurrencyCode>TRY</eın:CurrencyCode>
+                        
+                        <eın:DeliveryList>
+                           <!--Zero or more repetitions:-->
+                           <eın:Delivery>
+                              
+                              <eın:ActualDeliveryDate>{{InvoiceDate}}</eın:ActualDeliveryDate>
+                              
+                              <eın:DeliveryAddress>
+                                 
+                                 <eın:BuildingNumber>1</eın:BuildingNumber>
+                                 
+                                 <eın:CityName>ANKARA</eın:CityName>
+                                 
+                                 <eın:CitySubdivisionName>ANKARA</eın:CitySubdivisionName>
+                                 
+                                 <eın:CountryName>TÜRKİYE</eın:CountryName>
+                                 
+                                 <eın:PostalCode>06450</eın:PostalCode>
+                                 
+                                 <eın:Region>YENİMAHALLE</eın:Region>
+                              </eın:DeliveryAddress>
+                              
+                              <eın:DeliveryParty>
+                                 
+                                 <eın:PartyName>TÜRMOB LUCA DEMO</eın:PartyName>
+                                 
+                                 <eın:PartyTaxCode>8810234738</eın:PartyTaxCode>
+                                 
+                                 <eın:PostalAddress>
+                                    
+                                    <eın:BuildingNumber>Sahil Yolu 2025. Sokak</eın:BuildingNumber>
+                                    
+                                    <eın:CityName>ANKARA</eın:CityName>
+                                    
+                                    <eın:CitySubdivisionName>YENİMAHALLE</eın:CitySubdivisionName>
+                                    
+                                    <eın:CountryName>TÜRKİYE</eın:CountryName>
+                                    
+                                    <eın:PostalCode>35930</eın:PostalCode>
+                                    
+                                    <eın:Region>YENİMAHALLE</eın:Region>
+                                    
+                                    <eın:StreetName>ANKARA</eın:StreetName>
+                                 </eın:PostalAddress>
+                              </eın:DeliveryParty>
+                              
+                              <eın:DeliveryTermCode>SEVK</eın:DeliveryTermCode>
+                              
+                              <eın:DeliveryTerms>
+                                 
+                                 <eın:SpecialTerms>DDDDD</eın:SpecialTerms>
+                              </eın:DeliveryTerms>
+                              
+                              <eın:Despatch>
+                                 
+                                 <eın:DespatchParty>
+                                    
+                                    <eın:PartyName>ARASS</eın:PartyName>
+                                    
+                                    <eın:PartyTaxCode>0720039666</eın:PartyTaxCode>
+                                    
+                                    <eın:PostalAddress>
+                                       
+                                       <eın:BuildingNumber>23</eın:BuildingNumber>
+                                       
+                                       <eın:CityName>ANKARA</eın:CityName>
+                                       
+                                       <eın:CitySubdivisionName>ANKARA</eın:CitySubdivisionName>
+                                       
+                                       <eın:CountryName>TÜRKİYE</eın:CountryName>
+                                       
+                                       <eın:PostalCode>06450</eın:PostalCode>
+                                       
+                                       <eın:Region>YENİMAHALLE</eın:Region>
+                                    </eın:PostalAddress>
+                                 </eın:DespatchParty>
+                              </eın:Despatch>
+                              
+                              <eın:LatestDeliveryDate>{{InvoiceDate}}</eın:LatestDeliveryDate>
+                              
+                              <eın:ProductTraceId>1</eın:ProductTraceId>
+                              
+                              <eın:Shipment>
+                                 <eın:ShipmentStageList>
+                                    <!--Zero or more repetitions:-->
+                                    <eın:ShipmentStage>
+                                       
+                                       <eın:TransportModeCode>SEVK</eın:TransportModeCode>
+                                    </eın:ShipmentStage>
+                                 </eın:ShipmentStageList>
+                                 
+                                 <eın:ShipmentTransportMeansList>
+                                    <!--Zero or more repetitions:-->
+                                    <eın:ShipmentTransportMeans>
+                                       <eın:LicensePlateId>06K9063</eın:LicensePlateId>
+                                    </eın:ShipmentTransportMeans>
+                                 </eın:ShipmentTransportMeansList>
+                              </eın:Shipment>
+                           </eın:Delivery>
+                        </eın:DeliveryList>
+                        <eın:IdisTagNumberList>
+                           <eın:IdisTag>
+                              <eın:IdisTagNumber>SS1233444</eın:IdisTagNumber>
+                           </eın:IdisTag>
+                        </eın:IdisTagNumberList>
+                        <eın:Note>TEST NOTE</eın:Note>
+                        <eın:Product>
+                           <eın:ExternalProductCode>99991</eın:ExternalProductCode>
+                           <eın:MeasureUnit>NIU</eın:MeasureUnit>
+                           <eın:ProductCode>99991</eın:ProductCode>
+                           <eın:ProductName>TEST URUN</eın:ProductName>
+                           <eın:ReceiverProductCode>99991</eın:ReceiverProductCode>
+                           <eın:UnitPrice>1</eın:UnitPrice>
+                        </eın:Product>
+                        <eın:RelatedOrderLineNumber>1</eın:RelatedOrderLineNumber>
+                        <eın:SentQuantity>2</eın:SentQuantity>
+                     </eın:DespatchAdviceDetail>
+                  </eın:DespatchAdviceDetails>                  
+                  <eın:DespatchAdviceScenarioType>IDISIRSALIYE</eın:DespatchAdviceScenarioType>
+                  
+                  <eın:DespatchAdviceType>SEVK</eın:DespatchAdviceType>
+                  
+                  
+                  <eın:ExternalDespatchAdviceCode>{{ExternalInvoiceCode}}</eın:ExternalDespatchAdviceCode>
+                  <eın:Notes>
+                     <!--Zero or more repetitions:-->
+                     <arr:string></arr:string>
+                  </eın:Notes>
+                  <eın:ReceiverInboxTag>{{ReceiverInboxTag}}</eın:ReceiverInboxTag>
+                  
+                  <eın:Shipment>
+                     
+                     <eın:Delivery>
+                        
+                        <eın:ActualDespatchDate>{{InvoiceDate}}</eın:ActualDespatchDate>
+                        
+                        <eın:CarrierParty>
+                           
+                           <eın:Address>
+                              
+                              <eın:BoulevardAveneuStreetName>Gençlik cad.</eın:BoulevardAveneuStreetName>
+                              
+                              
+                              <eın:CityCode>0</eın:CityCode>
+                              
+                              <eın:CityName>ANKARA</eın:CityName>
+                              
+                              <eın:EMail>ebelgetest@luca.com.tr</eın:EMail>
+                              
+                              
+                              <eın:PostalCode>06450</eın:PostalCode>
+                              
+                              <eın:TaxOfficeCode>0</eın:TaxOfficeCode>
+                              
+                              <eın:TaxOfficeName>ÇANKAYA VERGİ DAİRESİ</eın:TaxOfficeName>
+                              
+                              
+                              <eın:TownCode>0</eın:TownCode>
+                              
+                              <eın:TownName>ANKARA</eın:TownName>
+                              
+                           </eın:Address>
+                           
+                           <eın:ReceiverName>ARAS</eın:ReceiverName>
+                           
+                           <eın:ReceiverTaxCode>0720039666</eın:ReceiverTaxCode>
+                           
+                           <eın:RecipientType>NONE</eın:RecipientType>
+                           
+                           <eın:SendingType>NONE</eın:SendingType>
+                           
+                        </eın:CarrierParty>
+                     </eın:Delivery>
+                     
+                     <eın:ShipmentStageList>
+                        <!--Zero or more repetitions:-->
+                        <eın:DespatchAdviceShipmentStage>
+                           
+                           <eın:DriverPersonList>
+                              <!--Zero or more repetitions:-->
+                              <eın:Person>
+                               
+                                 <eın:FamilyName>Ali</eın:FamilyName>
+                                 
+                                 <eın:FirstName>Velii</eın:FirstName>
+                                 
+                                 <eın:NationalityId>11111111111</eın:NationalityId>
+                                 
+                                 <eın:Title>Taşıyıcı Kargo Firması</eın:Title>
+                              </eın:Person>
+                           </eın:DriverPersonList>
+                           
+                           <eın:ShipmentTransportMeans>
+                              
+                              <eın:LicensePlateId>06K9999</eın:LicensePlateId>
+                           </eın:ShipmentTransportMeans>
+                        </eın:DespatchAdviceShipmentStage>
+                     </eın:ShipmentStageList>
+                      <eın:TotalValueAmount>2.00</eın:TotalValueAmount>
+                  </eın:Shipment>
+               </eın:DespatchAdvice>
+            </eın:DespatchAdvices>
+         </tem:request>
+      </tem:SendDespatchAdvice>
+   </soapenv:Body>
+</soapenv:Envelope>

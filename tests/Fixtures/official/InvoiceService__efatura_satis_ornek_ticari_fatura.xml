@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:ein="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SendInvoice>         
+         <tem:request>
+			<!--Faturayı düzenleyen firmaya ait VKN TCKN bilgisi-->         
+            <ein:CompanyTaxCode>1234567801</ein:CompanyTaxCode>            
+            <ein:Invoices>
+               <!--Zero or more repetitions:-->
+               <ein:Invoice>
+                  <ein:CurrencyCode>TRY</ein:CurrencyCode>                  
+                  <ein:CompanyBranchAddress>                     
+                     <ein:BoulevardAveneuStreetName>KOBİ ORGANİZE SANAYİ BÖLGESİ 103.CADDE NO:29</ein:BoulevardAveneuStreetName>                     
+                     <ein:CityCode>0</ein:CityCode>                     
+                     <ein:CityName>İstanbul</ein:CityName>                     
+                     <ein:PostalCode>34394</ein:PostalCode>                     
+                     <ein:TaxOfficeCode>0</ein:TaxOfficeCode>                     
+                     <ein:TaxOfficeName>BEŞİKTAŞ VERGİ DAİRESİ</ein:TaxOfficeName>                     
+                     <ein:TownCode>0</ein:TownCode>                     
+                     <ein:TownName>Şişli</ein:TownName>
+                  </ein:CompanyBranchAddress>
+                  <!--irsaliye bilgileri:-->
+                  <ein:DispatchList>                     
+                     <ein:Dispatch>   
+                        <!--irsaliye tarihi-->                     
+                        <ein:DispatchDate>2024-12-12T00:00:00Z</ein:DispatchDate>                        
+                        <!--irsaliye no-->
+                        <ein:DispatchNumber>A-24503</ein:DispatchNumber>
+                     </ein:Dispatch>
+                  </ein:DispatchList>
+
+				  <!--Faturaya özel Id kod(uuid), her yeni faturada yeniden oluşturulmalıdır.-->                  
+                  <ein:ExternalInvoiceCode>2024-12-12-59</ein:ExternalInvoiceCode>				  
+             
+				  <!--Fatura ve diğer tarihler güncel olmalı:-->                  
+                  <ein:InvoiceDate>2024-12-12</ein:InvoiceDate>
+                  <ein:InvoiceDetails>
+                     <ein:InvoiceDetail>
+                     <!--döviz kodu-->
+                        <ein:CurrencyCode>TRY</ein:CurrencyCode>
+                      <!--iskonto indirim oranı-->
+                        <ein:DiscountRate>0.0000000000</ein:DiscountRate>
+                        <!-- iskonto indirim tutarı-->
+                        <ein:DiscountAmount>0</ein:DiscountAmount>
+                        <!-- fatura satırı mal hizmet tutarı -->
+                        <ein:LineExtensionAmount>120.00</ein:LineExtensionAmount>
+                          <!--fatura satır açıklama-->
+                        <ein:Note>TEST STOK URUN  ALICI ABC</ein:Note>                        
+                        <ein:Product>                           
+                           <!--ürün/stok kodu-->
+                           <ein:ExternalProductCode>00100</ein:ExternalProductCode>
+                           <!--Birim kodu-->
+                           <ein:MeasureUnit>NIU</ein:MeasureUnit>
+                           <!--ürün/stok adı-->
+                           <ein:ProductName>TEST STOK URUN</ein:ProductName>
+                           <!--ürün/stok kodu-->
+                           <ein:ProductCode>00100</ein:ProductCode>
+                           <ein:ReceiverProductCode>00100</ein:ReceiverProductCode>                           
+                           <!--vergiler haric birim fiyat-->
+                           <ein:UnitPrice>1.00</ein:UnitPrice>
+                        </ein:Product>
+                        <!--miktar-->
+                        <ein:Quantity>100</ein:Quantity>
+                        <ein:SpecialBasisAmount>0</ein:SpecialBasisAmount>
+                        <ein:SpecialBasisPercent>0</ein:SpecialBasisPercent>
+                        <ein:SpecialBasisTaxAmount>0</ein:SpecialBasisTaxAmount>
+                        <!-- kdv tutarı-->
+                        <ein:VATAmount>20.00</ein:VATAmount>
+                        <!--kdv oranı-->
+                        <ein:VATRate>20.00</ein:VATRate>
+                     </ein:InvoiceDetail>
+                  </ein:InvoiceDetails>              
+                  <!--fatura tipi-->
+                  <ein:InvoiceType>SATIS</ein:InvoiceType>                  
+                  <!-- fatura not alanı-->
+                  <ein:Notes>               
+                     <arr:string>orem Ipsum is simply dummy text of the printing and typesetting industry.</arr:string>
+                     <arr:string>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</arr:string>
+                  </ein:Notes>                
+                  <!--sipariş bilgileri-->
+                  <ein:OrderDate>2024-12-12</ein:OrderDate>                 
+                  <ein:OrderNumber>AB123456</ein:OrderNumber>                                
+                  <!-- alıcı bilgileri-->
+                  <ein:Receiver>                     
+                     <ein:ReceiverName>02-TÜRMOB LUCA TEST KULLANICISI</ein:ReceiverName>                     
+                     <ein:ReceiverTaxCode>8810234738</ein:ReceiverTaxCode>                     
+                     <ein:RecipientType>NONE</ein:RecipientType>                     
+                     <ein:SendingType>NONE</ein:SendingType>
+                  </ein:Receiver>                  
+                  <ein:ReceiverBranchAddress>                     
+                     <ein:BoulevardAveneuStreetName>Esentepe Mahallesi, Bahar Sk.</ein:BoulevardAveneuStreetName>                     
+                     <ein:BuildingNumber>1300</ein:BuildingNumber>                     
+                     <ein:CityCode>0</ein:CityCode>                     
+                     <ein:CityName>İSTANBUL</ein:CityName>                     
+                     <ein:PostalCode>34394</ein:PostalCode>                     
+                     <ein:TaxOfficeCode>0</ein:TaxOfficeCode>                     
+                     <ein:TaxOfficeName>BEŞİKTAŞ VERGİ DAİRESİ</ein:TaxOfficeName>                     
+                     <ein:TownCode>0</ein:TownCode>                     
+                     <ein:TownName>ŞİŞLİ</ein:TownName>
+                  </ein:ReceiverBranchAddress>
+				   <!-- e-Fatura Alıcısına ait posta kutusu yazılmaldır. -->
+				   <!-- AddressBookServive, GetTaxPayer servisinden Etiket bilgisini sorgulayabilirsiniz. -->				   
+                  <ein:ReceiverInboxTag>urn:mail:defaultpk@luca.com.tr</ein:ReceiverInboxTag>                  
+                  <ein:ScenarioType>TICARIFATURA</ein:ScenarioType>                  
+                  <ein:TotalDiscountAmount>0</ein:TotalDiscountAmount>                  
+                  <ein:TotalLineExtensionAmount>120.00</ein:TotalLineExtensionAmount>                  
+                  <ein:TotalPayableAmount>120.00</ein:TotalPayableAmount>                  
+                  <ein:TotalTaxInclusiveAmount>100.00</ein:TotalTaxInclusiveAmount>                  
+                  <ein:TotalVATAmount>20.00</ein:TotalVATAmount>
+               </ein:Invoice>
+            </ein:Invoices>
+         </tem:request>
+      </tem:SendInvoice>
+   </soapenv:Body>
+</soapenv:Envelope>

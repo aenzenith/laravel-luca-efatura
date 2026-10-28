@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tem:SendArchiveInvoice>
+            <!--Optional:-->
+            <tem:request>
+                <!--Optional:-->
+                <eın:ArchiveInvoices>
+                    <!--Zero or more repetitions:-->
+                    <eın:ArchiveInvoice>
+                        <!--Optional:-->
+                        <eın:CompanyBranchAddress>
+                            <!--Optional:-->
+                            <eın:BoulevardAveneuStreetName>  YENİMAHALLE/ ANKARA
+                            </eın:BoulevardAveneuStreetName>
+                            <!--Optional:-->
+                            <eın:BuildingName/>
+                            <!--Optional:-->
+                            <eın:BuildingNumber/>
+                            <!--Optional:-->
+                            <eın:CityCode>0</eın:CityCode>
+                            <!--Optional:-->
+                            <eın:CityName>ANKARA</eın:CityName>
+                            <!--Optional:-->
+                            <eın:EMail>entegratordestek@luca.com.tr</eın:EMail>
+                            <eın:TaxOfficeName>ANKARA KURUMLAR</eın:TaxOfficeName>
+                            <!--Optional:-->
+                        </eın:CompanyBranchAddress>
+                        <!--Optional:-->
+                        <eın:CrossRate>0</eın:CrossRate>
+                        <!--Optional:-->
+                        <eın:CurrencyCode>TRY</eın:CurrencyCode>
+                        <!--Optional:-->
+                        <eın:ExternalArchiveInvoiceCode>2023-12-25-0000009</eın:ExternalArchiveInvoiceCode>
+                        <!--Optional:-->
+                        <eın:InvoiceDate>2023-12-25</eın:InvoiceDate>
+                        <!--Optional:-->
+                        <eın:InvoiceDetails>
+                            <!--Zero or more repetitions:-->
+                            <eın:ArchiveInvoiceDetail>
+                                <eın:AdditionalTaxes>
+                                    <!--Zero or more repetitions:-->
+                                    <eın:Tax>
+                                        <!--Optional:-->
+                                        <eın:TaxAmount>592404.02</eın:TaxAmount>
+                                        <!--Optional:-->
+                                        <eın:TaxCode>9077</eın:TaxCode>
+                                        <!--Optional:-->
+                                        <eın:TaxRate>80</eın:TaxRate>
+                                    </eın:Tax>
+                                </eın:AdditionalTaxes>
+                                <!--Optional:-->
+                                <eın:CurrencyCode>TRY</eın:CurrencyCode>
+                                <!--Optional:-->
+                                <eın:DiscountAmount>0</eın:DiscountAmount>
+                                <!--Optional:-->
+                                <eın:DiscountRate>0</eın:DiscountRate>
+                                <!--Optional:-->
+                                <eın:LineExtensionAmount>706502.84</eın:LineExtensionAmount>
+                                <!--Optional:-->
+                                <eın:Note>HR-V 1.5 ADVANCE HYBRID AT</eın:Note>
+                                <eın:Product>
+                                    <eın:ExternalProductCode>RV583PEXV KG 36</eın:ExternalProductCode>
+                                    <!--Optional:-->
+                                    <eın:MeasureUnit>NIU</eın:MeasureUnit>
+                                    <!--Optional:-->
+                                    <eın:ProductCode>RV583PEXV KG 36</eın:ProductCode>
+                                    <!--Optional:-->
+                                    <eın:ProductName>HR-V 1.5 ADVANCE HYBRID AT</eın:ProductName>
+                                    <!--Optional:-->
+                                    <eın:ReceiverProductCode>RV583PEXV KG 36</eın:ReceiverProductCode>
+                                    <eın:UnitPrice>706502.84</eın:UnitPrice>
+
+                                </eın:Product>
+                                <!--Optional:-->
+                                <eın:Quantity>1</eın:Quantity>
+                                <eın:VATAmount>259781.37</eın:VATAmount>
+                                <eın:VATRate>20.00</eın:VATRate>
+                                <!--Optional:-->
+                            </eın:ArchiveInvoiceDetail>
+                        </eın:InvoiceDetails>
+
+                        <eın:InvoiceType>SATIS</eın:InvoiceType>
+                        <eın:IsArchived>false</eın:IsArchived>
+                        <!--Optional:-->
+                        <!--Optional:-->
+                        <eın:Notes>
+                            <!--Zero or more repetitions:-->
+                            <arr:string>Fatura Notları</arr:string>
+                            <arr:string>TEST E ARŞİV FATURASIDIR.</arr:string>
+                            <arr:string>İrsaliye yerine geçer.</arr:string>
+                        </eın:Notes>
+                        <eın:Receiver>
+                            <!--Optional:-->
+                            <eın:Address>
+                                <eın:CityCode>06</eın:CityCode>
+                                <eın:CityName>ANKARA</eın:CityName>
+                                <eın:EMail>ornek@example.com</eın:EMail>
+                            </eın:Address>
+                            <eın:ReceiverName>ALIC ADI SOYADI</eın:ReceiverName>
+                            <eın:ReceiverTaxCode>123456789011</eın:ReceiverTaxCode>
+                            <eın:SendingType>ELEKTRONIK</eın:SendingType>
+                        </eın:Receiver>
+                        <!--Optional:-->
+                        <eın:ReceiverBranchAddress>
+                            <eın:BoulevardAveneuStreetName>İLKADIM MAH. PARK VADİ EVLERİ
+                            </eın:BoulevardAveneuStreetName>
+                            <eın:CityCode>0</eın:CityCode>
+                            <!--Optional:-->
+                            <eın:CityName>ANKARA</eın:CityName>
+                            <!--Optional:-->
+                            <eın:EMail>entegratordestek@luca.com.tr</eın:EMail>
+                        </eın:ReceiverBranchAddress>
+
+                        <eın:SendMailAutomatically>true</eın:SendMailAutomatically>
+                        <!--Optional:-->
+                        <eın:TotalDiscountAmount>0</eın:TotalDiscountAmount>
+                        <!--Optional:-->
+                        <eın:TotalLineExtensionAmount>706502.84</eın:TotalLineExtensionAmount>
+                        <!--Optional:-->
+                        <eın:TotalPayableAmount>1558688.23</eın:TotalPayableAmount>
+                        <!--Optional:-->
+                        <eın:TotalTaxInclusiveAmount>1558688.23</eın:TotalTaxInclusiveAmount>
+                        <!--Optional:-->
+                        <eın:TotalVATAmount>259781.37</eın:TotalVATAmount>
+
+
+                    </eın:ArchiveInvoice>
+                </eın:ArchiveInvoices>
+                <!--Optional:-->
+                <eın:CompanyTaxCode>1234567801</eın:CompanyTaxCode>
+                <!--Optional:-->
+            </tem:request>
+        </tem:SendArchiveInvoice>
+    </soapenv:Body>
+</soapenv:Envelope>

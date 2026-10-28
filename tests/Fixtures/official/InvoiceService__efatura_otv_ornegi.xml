@@ -1,0 +1,109 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/"
+    xmlns:ein="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model"
+    xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+    <soapenv:Header />
+    <soapenv:Body>
+        <tem:SendInvoice>
+            <tem:request>
+                <!--Faturayı düzenleyen firmaya ait VKN TCKN bilgisi-->
+                <ein:CompanyTaxCode>1234567801</ein:CompanyTaxCode>
+                <ein:Invoices>
+                    <!--Zero or more repetitions:-->
+                    <ein:Invoice>
+                        <ein:CurrencyCode>TRY</ein:CurrencyCode>
+                        <ein:CompanyBranchAddress>
+                            <ein:BoulevardAveneuStreetName>ÇAMLICA MAH. 126.SOKAK NO:8 YENİMAHALLE/ ANKARA
+                            </ein:BoulevardAveneuStreetName>
+                            <ein:BuildingNumber></ein:BuildingNumber>
+                            <ein:CityCode></ein:CityCode>
+                            <ein:CityName>Ankara</ein:CityName>
+                            <ein:PostalCode></ein:PostalCode>
+                            <ein:TaxOfficeCode>0</ein:TaxOfficeCode>
+                            <ein:TaxOfficeName>ANKARA KURUMLAR</ein:TaxOfficeName>
+                            <ein:TownCode>0</ein:TownCode>
+                            <ein:TownName>YENİMAHALLE</ein:TownName>
+                        </ein:CompanyBranchAddress>
+
+                        <!--Faturaya özel Id kod, her yeni faturada yeniden oluşturulmalıdır.-->
+                        <ein:ExternalInvoiceCode>TEST-25122023-21</ein:ExternalInvoiceCode>
+
+                        <ein:InvoiceAdditionalIdentityInfo>
+                            <ein:CustomerNo></ein:CustomerNo>
+                        </ein:InvoiceAdditionalIdentityInfo>
+
+                        <!--Fatura ve diğer tarihler güncel olmalı:-->
+                        <ein:InvoiceDate>2023-12-25</ein:InvoiceDate>
+                        <ein:InvoiceDetails>
+                            <ein:InvoiceDetail>
+                                <ein:AdditionalTaxes>
+                                    <!-- ÖTV -->
+                                    <ein:Tax>
+                                        <!--Optional:-->
+                                        <ein:TaxAmount>563071.06</ein:TaxAmount>
+                                        <!--Optional:-->
+                                        <ein:TaxCode>9077</ein:TaxCode>
+                                        <!--Optional:-->
+                                        <ein:TaxRate>80</ein:TaxRate>
+                                    </ein:Tax>
+                                </ein:AdditionalTaxes>
+                                <ein:CurrencyCode>TRY</ein:CurrencyCode>
+                                <ein:DiscountRate>0.0000000000</ein:DiscountRate>
+                                <ein:DiscountAmount>0</ein:DiscountAmount>
+                                <ein:LineExtensionAmount>701669.71</ein:LineExtensionAmount>
+                                <ein:Product>
+                                    <ein:ExternalProductCode>FE167RJNX TR</ein:ExternalProductCode>
+                                    <ein:MeasureUnit>NIU</ein:MeasureUnit>
+                                    <ein:ProductName>CIVIC 4D 1.5 EXE PLUS AT LPG</ein:ProductName>
+                                    <ein:ProductCode>FE167RJNX TR</ein:ProductCode>
+                                    <ein:ReceiverProductCode>FE167RJNX TR</ein:ReceiverProductCode>
+                                    <ein:UnitPrice>701669.71</ein:UnitPrice>
+                                </ein:Product>
+                                <ein:Quantity>1</ein:Quantity>
+                                <ein:VATAmount>252948.15</ein:VATAmount>
+                                <ein:VATRate>20.00</ein:VATRate>
+                            </ein:InvoiceDetail>
+                        </ein:InvoiceDetails>
+                        <ein:InvoiceType>SATIS</ein:InvoiceType>
+                        <ein:Notes>
+                            <!--Zero or more repetitions:-->
+                            <arr:string>İŞBU FATURADAKİ ÖZELLİKLERİ YAZILI ARACIN ÖZEL TÜKETİM VERGİSİ 21.12.2023 TARİH
+                                VE NOLU MAKBUZ İLE YEĞENBEY VERGİ DAİRESİNE YATIRILMIŞTIR.ı</arr:string>
+                            <arr:string>LPG donanımlı araçlarda LPG kit fiyatı, montaj işçiliği ve sızdırmazlık test
+                                ücreti araç fiyatına dahildir.</arr:string>
+                        </ein:Notes>
+
+                        <ein:Receiver>
+                            <ein:ReceiverName>25 ARALIK 2023 FIRMASI</ein:ReceiverName>
+                            <ein:ReceiverTaxCode>8810234738</ein:ReceiverTaxCode>
+                            <ein:RecipientType>NONE</ein:RecipientType>
+                            <ein:SendingType>NONE</ein:SendingType>
+                        </ein:Receiver>
+
+                        <ein:ReceiverBranchAddress>
+                            <ein:BoulevardAveneuStreetName>DIKMEN CADDESİ NO 562</ein:BoulevardAveneuStreetName>
+                            <ein:BuildingNumber>0</ein:BuildingNumber>
+                            <ein:CityCode>0</ein:CityCode>
+                            <ein:CityName>ANKARA</ein:CityName>
+                            <ein:PostalCode>0</ein:PostalCode>
+                            <ein:TaxOfficeCode>0</ein:TaxOfficeCode>
+                            <ein:TaxOfficeName>Kahramankazan</ein:TaxOfficeName>
+                            <ein:TownCode>0</ein:TownCode>
+                            <ein:TownName>KAZAN</ein:TownName>
+                        </ein:ReceiverBranchAddress>
+
+                        <!-- e-Fatura Alıcısına ait posta kutusu yazılmaldır. -->
+                        <!-- AddressBookServive, GetTaxPayer servisinden Etiket bilgisini sorgulayabilirsiniz. -->
+                        <ein:ReceiverInboxTag>urn:mail:169defaultpk@luca.com.tr</ein:ReceiverInboxTag>
+                        <ein:ScenarioType>TICARIFATURA</ein:ScenarioType>
+                        <ein:TotalDiscountAmount>0</ein:TotalDiscountAmount>
+                        <ein:TotalLineExtensionAmount>701669.71</ein:TotalLineExtensionAmount>
+                        <ein:TotalPayableAmount>1517688.92</ein:TotalPayableAmount>
+                        <ein:TotalTaxInclusiveAmount>1517688.92</ein:TotalTaxInclusiveAmount>
+                        <ein:TotalVATAmount>252948.15</ein:TotalVATAmount>
+
+                    </ein:Invoice>
+                </ein:Invoices>
+            </tem:request>
+        </tem:SendInvoice>
+    </soapenv:Body>
+</soapenv:Envelope>

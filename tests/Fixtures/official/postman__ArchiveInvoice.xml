@@ -1,0 +1,22 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:ArchiveInvoice>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+            <!--Optional:-->
+            <eın:CompanyVendorNumber></eın:CompanyVendorNumber>
+            <!--Gelen Fatura Incoming-->
+            <!--Giden Fatura Outgoing-->
+            <eın:InvoiceDirection>Outgoing</eın:InvoiceDirection>
+            <!--Fatura ETTN Listesi-->
+            <eın:InvoiceETTNList>
+               <arr:string>abf7b0f1-c96f-495f-9da7-f3f63e33e2cb</arr:string>
+               <arr:string>7a979437-bb4d-46b0-a3de-f54e6da41768</arr:string>
+            </eın:InvoiceETTNList>
+         </tem:request>
+      </tem:ArchiveInvoice>
+   </soapenv:Body>
+</soapenv:Envelope>

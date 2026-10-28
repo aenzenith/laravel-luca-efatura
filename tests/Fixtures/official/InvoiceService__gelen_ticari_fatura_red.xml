@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SendInvoiceReply>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+            <!--Optional:-->
+            <eın:CompanyVendorNumber/>
+            <!--Optional:-->
+            <eın:InvoiceReplies>
+               <!--Zero or more repetitions:-->
+               <eın:InvoiceReply>
+                  <!--Optional:-->
+                  <eın:InvoiceETTN>d87a2871-2841-4aa7-9cf7-5f6e468d0a30</eın:InvoiceETTN>
+                  <!--Optional:-->
+                  <eın:InvoiceResponse>RED</eın:InvoiceResponse>
+                  <!--Optional:-->
+                  <eın:InvoiceResponseDescription>RED EDİLDİ.</eın:InvoiceResponseDescription>
+               </eın:InvoiceReply>
+            </eın:InvoiceReplies>
+         </tem:request>
+      </tem:SendInvoiceReply>
+   </soapenv:Body>
+</soapenv:Envelope>

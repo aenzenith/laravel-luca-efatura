@@ -1,0 +1,3496 @@
+SearchInvoice:
+#Gönderilen Satış Faturaları
+#Fatura bazında ETTN(UUID) örneği
+#ResultSet Pdf/XML true gönderildiğinde base64 alınabilir.
+
+Request:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ein="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<tem:SearchInvoice>
+			<!--Optional:-->
+			<tem:request>
+				<!--Optional:-->
+				<eın:CompanyTaxCode>1234567801</eın:CompanyTaxCode>
+				<eın:Ettn>74e896f0-24d4-4fc8-941a-f3e3b0ac678b</eın:Ettn>
+				<eın:InvoiceDirection>Outgoing</eın:InvoiceDirection>
+				<eın:PagingRequest>
+					<eın:PageNumber>1</eın:PageNumber>
+					<eın:RecordsPerPage>25</eın:RecordsPerPage>
+				</eın:PagingRequest>
+				<eın:ResultSet>
+					<eın:IsAdditionalTaxIncluded>false</eın:IsAdditionalTaxIncluded>
+					<eın:IsArchiveIncluded>true</eın:IsArchiveIncluded>
+					<eın:IsExternalUrlIncluded>true</eın:IsExternalUrlIncluded>
+					<eın:IsHtmlIncluded>false</eın:IsHtmlIncluded>
+					<eın:IsInvoiceDetailIncluded>false</eın:IsInvoiceDetailIncluded>
+					<eın:IsPDFIncluded>false</eın:IsPDFIncluded>
+				</eın:ResultSet>
+			</tem:request>
+		</tem:SearchInvoice>
+	</soapenv:Body>
+</soapenv:Envelope>
+
+
+Response:
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <SearchInvoiceResponse xmlns="http://tempuri.org/">
+         <SearchInvoiceResult xmlns:a="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ErrorMessage i:nil="true"/>
+            <a:Result>Success</a:Result>
+            <a:Invoices>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate>0001-01-01T00:00:00</a:ActualExportDate>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription i:nil="true"/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>0001-01-01T00:00:00</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>1.0000</a:CrossRate>
+                  <a:CrossRateDate>2023-07-18T00:00:00</a:CrossRateDate>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus>Adres_Bulunamadi</a:DetailStatus>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList i:nil="true"/>
+                  <a:ETTN>74e896f0-24d4-4fc8-941a-f3e3b0ac678b</a:ETTN>
+                  <a:EnvelopeId>ba1f62f5-8246-43bf-9ec4-0540b8ed2405</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode>0a80440f-6b13-4d4a-81db-6622e456c9e3</a:ExternalInvoiceCode>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber/>
+                  <a:GtbReferenceNumber/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo i:nil="true"/>
+                     <a:CommercialRegisterNo i:nil="true"/>
+                     <a:CounterNo i:nil="true"/>
+                     <a:CustomerNo i:nil="true"/>
+                     <a:DistributorNo i:nil="true"/>
+                     <a:EpdkNo i:nil="true"/>
+                     <a:FarmerNo i:nil="true"/>
+                     <a:FileNo i:nil="true"/>
+                     <a:IntermediaryCorporationTag i:nil="true"/>
+                     <a:IntermediaryCorporationVkn i:nil="true"/>
+                     <a:ManufacturerNo i:nil="true"/>
+                     <a:MersisNo i:nil="true"/>
+                     <a:PasaportNo i:nil="true"/>
+                     <a:PatientNo i:nil="true"/>
+                     <a:PhoneNo i:nil="true"/>
+                     <a:PlumbingNo i:nil="true"/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo i:nil="true"/>
+                     <a:ServiceNo i:nil="true"/>
+                     <a:SubscriberNo i:nil="true"/>
+                     <a:TapdkNo i:nil="true"/>
+                     <a:Tckn i:nil="true"/>
+                     <a:Vkn i:nil="true"/>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-07-25T17:24:43.067</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-07-18T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=Q7xI82iuzM6lYyFv5ub%2brAOiaNnt3X4RMXOt3SbRBGl2kSwxDlIW%2fhxe%2fGicyiNr8d90owM5Qad2jP0pB97m7mUFOSFAtuPQnBH6mYL37CMk81dS5%2frqH91Bj%2bNLglm0FyvQkEpNGQc%2fZAAFlOVpQkNS4wapqaTK</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>VSN2023000000002</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList i:nil="true"/>
+                  <a:InvoiceType>ISTISNA</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate>0001-01-01T00:00:00</a:LastPaymentDate>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>S/N: 2306160004925 2306160004307 2306160004369</b:string>
+                  </a:Notes>
+                  <a:OrderDate i:nil="true"/>
+                  <a:OrderNumber/>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address i:nil="true"/>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>Ad Soyad</a:ReceiverName>
+                     <a:ReceiverTaxCode>11111111111</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:defaultpk@elogo.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TEMELFATURA</a:ScenarioType>
+                  <a:Status>Gib_Tarafinda_Hata_Olustu</a:Status>
+                  <a:SystemResponseDescription>(11111111111,urn:mail:defaultpk@elogo.com.tr) ikilisine ait adres bilgisi bulanamadı.</a:SystemResponseDescription>
+                  <a:TaxExemptionReason/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>10001.00</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>10001.00</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>10001.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>752.28</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+            </a:Invoices>
+            <a:PagingResponse>
+               <a:PageNumber>1</a:PageNumber>
+               <a:RecordsPerPage>25</a:RecordsPerPage>
+               <a:TotalNumberOfPages>1</a:TotalNumberOfPages>
+               <a:TotalNumberOfRecords>1</a:TotalNumberOfRecords>
+            </a:PagingResponse>
+         </SearchInvoiceResult>
+      </SearchInvoiceResponse>
+   </s:Body>
+</s:Envelope>
+
+
+
+SearchInvoice:
+#Gelen Alış Faturaları
+#Fatura Tarih Aralığı örneği
+#ResultSet Pdf/XML true gönderildiğinde base64 alınabilir.
+Request:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ein="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<tem:SearchInvoice>
+			<!--Optional:-->
+			<tem:request>
+				<!--Optional:-->
+				<eın:CompanyTaxCode>1234567801</eın:CompanyTaxCode>
+				<eın:InvoiceDirection>Incoming</eın:InvoiceDirection>
+				<eın:MaxInvoiceDate>2023-10-26</eın:MaxInvoiceDate>
+				<eın:MinInvoiceDate>2023-08-24</eın:MinInvoiceDate>
+				<eın:PagingRequest>
+					<eın:PageNumber>1</eın:PageNumber>
+					<eın:RecordsPerPage>25</eın:RecordsPerPage>
+				</eın:PagingRequest>
+				<eın:ResultSet>
+					<eın:IsAdditionalTaxIncluded>false</eın:IsAdditionalTaxIncluded>
+					<eın:IsArchiveIncluded>true</eın:IsArchiveIncluded>
+					<eın:IsExternalUrlIncluded>true</eın:IsExternalUrlIncluded>
+					<eın:IsHtmlIncluded>false</eın:IsHtmlIncluded>
+					<eın:IsInvoiceDetailIncluded>false</eın:IsInvoiceDetailIncluded>
+					<eın:IsPDFIncluded>false</eın:IsPDFIncluded>
+				</eın:ResultSet>
+			</tem:request>
+		</tem:SearchInvoice>
+	</soapenv:Body>
+</soapenv:Envelope>
+
+
+Response:
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+   <s:Body>
+      <SearchInvoiceResponse xmlns="http://tempuri.org/">
+         <SearchInvoiceResult xmlns:a="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+            <a:ErrorMessage i:nil="true"/>
+            <a:Result>Success</a:Result>
+            <a:Invoices>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>0001-01-01T00:00:00</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList/>
+                  <a:ETTN>eb354d58-163a-4dfd-a9c5-56ef6d4ebc24</a:ETTN>
+                  <a:EnvelopeId>825ae807-146a-448e-a69e-8ee9ecf41cf2</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo i:nil="true"/>
+                     <a:CommercialRegisterNo i:nil="true"/>
+                     <a:CounterNo i:nil="true"/>
+                     <a:CustomerNo i:nil="true"/>
+                     <a:DistributorNo i:nil="true"/>
+                     <a:EpdkNo i:nil="true"/>
+                     <a:FarmerNo i:nil="true"/>
+                     <a:FileNo i:nil="true"/>
+                     <a:IntermediaryCorporationTag i:nil="true"/>
+                     <a:IntermediaryCorporationVkn i:nil="true"/>
+                     <a:ManufacturerNo i:nil="true"/>
+                     <a:MersisNo i:nil="true"/>
+                     <a:PasaportNo i:nil="true"/>
+                     <a:PatientNo i:nil="true"/>
+                     <a:PhoneNo i:nil="true"/>
+                     <a:PlumbingNo i:nil="true"/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo i:nil="true"/>
+                     <a:ServiceNo i:nil="true"/>
+                     <a:SubscriberNo i:nil="true"/>
+                     <a:TapdkNo i:nil="true"/>
+                     <a:Tckn i:nil="true"/>
+                     <a:Vkn i:nil="true"/>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-09-13T14:21:59.943</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-09-13T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=Te%2fq%2fo3X7rfbsGYBCJ1ux4Diew93fqDzT%2b7%2fk7084lgFIN%2fDfcq9ealiCu98qS3gWyOxknCEjXvADraNS8bmHQGkvkptvXRX1sfzlEu7kjcOqJzxuagz45sLVf3OomEmwzbXbFIBLuQC7hU%2fMhekCDE77f760Dmo</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>SMT2023000000172</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList>
+                     <a:Tax>
+                        <a:TaxAmount>80.00</a:TaxAmount>
+                        <a:TaxCode>9015</a:TaxCode>
+                        <a:TaxRate>20.00</a:TaxRate>
+                     </a:Tax>
+                  </a:InvoiceTotalTaxList>
+                  <a:InvoiceType>TEVKIFAT</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>#IKI BIN ÜÇ YÜZ YIRMI TL SIFIR KURUŞ#</b:string>
+                  </a:Notes>
+                  <a:OrderDate i:nil="true"/>
+                  <a:OrderNumber/>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>MORGAN FREEMAN</a:ReceiverName>
+                     <a:ReceiverTaxCode>1234567801</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:11818defaultgb@isnet.com</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TEMELFATURA</a:ScenarioType>
+                  <a:Status>Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>2000.00</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>2320.00</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>400.00</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.583</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>99b9f7a6-5b55-436d-9caf-3312b99a16cd</a:ETTN>
+                  <a:EnvelopeId>542af576-8be8-40b4-8665-360e7788aa12</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:34:08.58</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=QX5bBRTuIQOMSGjCgrJOJKxMkQ%2fKsac%2bhlduftxytWfmi4l9cO1r59%2fCfrXLpL6JUwRdoC56sKich11TUXqKXeL1VqKrmly9p3q06obj6PcvQufwkJYMFG%2f%2foYk8%2bhX6otS%2bx%2bQ86Oh8B2Ee27BQ%2f31xj7aLmu6k</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000052</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.57</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>6fab3ae8-4044-4ee2-a5b0-6fb5032cd6c6</a:ETTN>
+                  <a:EnvelopeId>e1d9e377-2d06-4671-a198-40a2ba85567a</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:34:05.157</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=5VWcm3MkOzd2O5RuGXwh7%2fnpkiCc%2fo1rfq1sy2NXGHhq2nHAHOjvztk5OybA5tvzefx3VaCHiRVezz5OFpsvMFyPNh08XEA3ut3ndtKsMR%2fq5lU6P0jYY7c6DobkRWn3s6h4xTn8f2MeqJwvS2SNN2hlgSLxMbsB</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000051</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.57</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>b7084e38-c789-43c2-be6f-05a8f859e521</a:ETTN>
+                  <a:EnvelopeId>391b1fe7-f485-4af1-a97a-f5c6157e8746</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:34:05.11</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=tydaZHg7HQnvtAs291%2bPu68PXm823MwYymXtG6p8caFXPKif37Y7qMVTvk05ejO79tAVsQmcDSCxG4klUz%2byzIW168DCZJnfTgXf8PhwZybgqkhb0%2bxB9Ujv3DJENsUpfT63xADcBCelY05JdQh2txSVV%2ft1y7%2bo</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000050</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.57</a:ApprovalDate>
+                  <a:ArchiveDate>2023-09-21T11:52:44.527</a:ArchiveDate>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>a51ee2ce-061d-4155-84dc-051b0c8e31e5</a:ETTN>
+                  <a:EnvelopeId>1e6c8f8a-8bba-4c6e-acf3-2b2e918b9d7d</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:34:03.907</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=ZlLc9zqsQ7zIvQ8249URNsLGtYLHns5vPer4erBAOXOcx64YtMXEYds4v84XlkCnbaCvSTgraLyqzlR9qDfmJip36ggSx1nv0C7egSc9q%2fLMwMrUwuujVAgPLWxX%2bYItcppSjrBt0GBvqVWsKqcP6J20fLRLpMHL</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000049</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>true</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Iade_Edildi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.553</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>96c21e9d-23a9-41e1-b4f2-0b3555bf37e9</a:ETTN>
+                  <a:EnvelopeId>755796ee-2e63-4453-ba39-f5c2f7921d46</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:59.237</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=l7COsLZkBaXIesWZyd%2fOaqBY%2f%2foSiQg7LuIuipwgpMjLwJfcRXl8lwZcrAuh3k7h75NoL4rYH8IMp4789hJJvtaIQluqDRVVOaqJgUqQoFFO32UljGTHJS01uk1l6MCXGkALybBJqJfKnC%2fGEYxAvLOLZZD7DLT0</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000048</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.553</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>d48daf5f-9342-47f5-b6dc-07a07da669bc</a:ETTN>
+                  <a:EnvelopeId>e719806c-541d-45dc-80fd-7799115f6919</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:58.487</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=%2bMO0JYFGGv%2fyWTxKrTet5grcxKvS4DrmV620hokgA9dEkZWH0aFdeyYbCHXiOw3BHzuG%2f56%2f1SjXWGJNXWbzn4FGysSuWD0Ith0Up8tsxn1pL6fMeLidfs3rsLZxyMqMKfffxKllyNqfYKjkU4%2bFHPXkK4DiRB%2b6</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000047</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.537</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>6fd766ab-5746-4f55-a886-78a4e5f454c8</a:ETTN>
+                  <a:EnvelopeId>5d83b714-f8fe-4dbb-9fd7-3b076a49a6d4</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:54.453</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=zekB2WZ6PZxtHyj2jY7jNmcQk53fAc40poRR%2fkn58Hqp1r8hH%2bMbhToosXF7aK0GgLjqLQRRQ%2fHtmted%2bSkyAKnvCmeAtGT%2bbAV2xoD6evCtUQ5xMeSiFEPXtxzf%2fqp3YoT%2b7VfDk90G7QmSrFX%2bpcn1y7J8lC9I</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000046</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.52</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>8ffd5bcc-13cd-4290-b9b7-dccc1a0738f6</a:ETTN>
+                  <a:EnvelopeId>eba57c77-edb4-471c-bf6e-1faa4bd338fc</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:54.157</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=rM5MRN3jRqxA%2b4sxTA7En2soSEHSKoG3Sjj%2bcbAx8BmSDZzJWUKfnTzPAOeEBaUv0y8afJCgpcm8WN3HvvwDyOCGBQe7ssfpO1YFN%2fvJ4LFtvoBIeoKfeq%2b7lSLYHLCy8mCnwrXFgw85DjgEp1aXSXze31DimW6Y</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000045</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.52</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>6824f84e-4a98-4862-b8d8-cc8173d20477</a:ETTN>
+                  <a:EnvelopeId>f1048ab9-d697-4f87-910c-10a36eb517ad</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:49.36</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=JpQDuO0w7XuYJRDaFBnqtZLzMM9l1A0X0d4FrjCXF2xJOxHiIcg2vJpeD3ZVhsHHaadmma68wg7rgcjzM41ObXsQblTzjDoQ4bkdUPjlNUn8J9o3IFBaNEq4xH%2blDv2mnC1qljDjFFkbVXPIVbtBwrHKwU3j53td</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000044</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.52</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>3a3c2493-dc30-4972-be55-7931bae21aa3</a:ETTN>
+                  <a:EnvelopeId>87c28573-1f36-4cd8-bed6-8d126090a6f0</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:48.75</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=U58tpjP0x9tjQHZW%2b2hoCn%2bbXnBY%2fYI5gQ8wSua1W3zw6rgMVtNrGsUBjGozp38WjXRumAihf%2fZUrgYOwCwUhjdjHhiWFJB2WnFpdcsAe%2bvBleB41PFu5cXna5R1rFMh4MBxSv1mxe9iU8wGYXmwL1d15FbJevii</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000043</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.507</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>4451f973-e289-4351-ac90-fd5739705708</a:ETTN>
+                  <a:EnvelopeId>0e62a6bd-2452-4c45-866d-2051f02f3499</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:44.063</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=eIS3Oxqk2YJuIZYJrWhPA7Kcl1h0MmkasAAFbH2jZT2v9BVXc5XWZKDAuDyz1l1vqkVb%2fktGSz733WaiYfZg%2fCSaHStumkcJi%2fAiZ7NVIec0RYqHflrsqmj%2fpe7INHu4M12RSTsBzPL7IrNcEooiY2GOwzM8Vz84</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000042</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.507</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>c219d661-68c1-4c9e-8df6-5ec899102498</a:ETTN>
+                  <a:EnvelopeId>57ac4926-011a-4b08-b519-a1dbcf5a65ce</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:43.627</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=aiZJqFz4Hd7fncLkZ0InQcyabcOT6ZXPSfKUAdDkwniBcuzu2BPx%2fVcL%2b4nMj3AUSs45vMUrq68F3xr5fqwVl3C0pfZjJ6Gg9QqKkI6WyE5ZVvt88M7XZvvoeZh9Ag7wfbS0qiFouYV5MA2KVfk8MvvmuMfPXI96</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000041</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.49</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>e702e8b2-2854-4d87-8ac5-0911ec462c0d</a:ETTN>
+                  <a:EnvelopeId>fb2e4a40-4ac9-4cbd-95aa-b9f8f08e00b2</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:39.127</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=piC3PxCdn7Tjak%2bEu4nftvHKXY%2bnNbCGKjAY1Tm5m8YNJniQO2GgsiB3946VZ8VSTkLEQzPz7MczmJ1xanNEblFAmCTuPCndy12W9t%2bc4YXrrjnI%2ftK3ZQy%2bHBH%2b8qEYecZ8EJ5vfyUM90625HpfOszonj9SgfS0</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000040</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.49</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>a4c58f76-d120-42eb-9cf8-804381efa972</a:ETTN>
+                  <a:EnvelopeId>3b2561fe-ac01-4319-a1de-c6344b12fffd</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:38.923</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=WXzQZWCdtwaeiyjeglYh9sLARKnDHRRpnikDqV%2bTJJ3UzVkd6WKQz7NTADGW2uHGvy%2bUD1N6ST3izjZxk8xPNVSsXXSmRZ%2fLQABJE96wKrQD05DoxCkXM1AgZJZpEoM8iieoian9Nxtt2N4ODHmE3ne1DQ3cG%2bMy</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000039</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.49</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>a418b563-df6d-467d-83da-24a9215c278b</a:ETTN>
+                  <a:EnvelopeId>eeeb193a-72ed-45f6-a49d-e697298297bf</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:33.423</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=nxv0LDPqTsNUb%2bNz3x3743Orm6c4Xi9DFam63IfmlFIfKzvFD1BuMaIGBh%2b%2bYRFehAwG1mPH5vRIWaMJ7%2fbzj9xPFLdo46Vus7jFoo0%2fHoSKoJK%2bRh%2bFxlTXRdLOU2JsgS%2fNU0p1w%2f9KxGOZbn09iJ2cSIkgLz%2fQ</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000038</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.473</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>1dbc059f-bbae-487a-8059-6be690355749</a:ETTN>
+                  <a:EnvelopeId>51b075a0-a61a-4708-9548-24081eafef33</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:28.673</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=c5HxEa3p6aq%2fuj8YZJ8Q0iUWQUv%2fl6oRZ%2fetKento%2b%2bWRq1Xv3daTgltZiOGs%2f1YUhM0bchTVVWNvtl67ushZ6QXvNV5Hjn4NZFp4qeGSGomYj9fDv5fj%2fzRLKu60DivsSkcUxdm4LEfCQQbWirb5kHoVCnNhJsW</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000037</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.473</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>7cee7ef5-1313-4465-b0fe-a1c0447f2df9</a:ETTN>
+                  <a:EnvelopeId>a7dc5937-7858-473b-ad35-937e916b413a</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:24.953</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=dWVplB%2fI4Du35g%2fyIwGYLFK6n%2bbiBkRCnTLLbVC%2bcEOmhabZQRHKopcUxaTtWeLdLbW4fR%2bbvjHtk5zeKkEjFawLVlUKC15zWcBij8vx6NnvX5aa1LoRrRCVR8z1kiAPZMvk6RLaMaD1RSymyAoqObN%2fjSB0EsFe</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000036</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.473</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>ea87ca46-7dbd-4e0a-84d0-a446d1f3675b</a:ETTN>
+                  <a:EnvelopeId>95c28cf5-91f7-4cfd-a7b4-02b71745c6a0</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:24.813</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=FSFBJyiVog4etVL9Rg5fpPSsp3H9SMfQtlZCz2MashBIhbRq1FgWHK96ZdaPdBl3LeKHIo9hYdhUeHVbH2e0%2fggwNIxI2INMTv7fVU6Z%2fJwy8kBdwxzUWJehUqkaZV00HIZDp3nHzwT0rJv%2fOgjJfZ8xpR5feV4t</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000035</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.46</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>dcbd8dba-b8b7-465b-a19d-ee17938c6247</a:ETTN>
+                  <a:EnvelopeId>e489625c-c8de-42c5-91dc-024de6f1cfae</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:08.61</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=wDHHkv4dERnFmar782FNYmBrZzrNs8A01BR7%2fpN6QeHQrrdzyG7lBUc4AQwfvgaWgJCA5yrC%2b9v4f1qqFZP0U2eEiRxjwK1%2bIS6i%2bkNxH9%2fvA40fxLn4xfoOYI7D8rWIbstSiS8Tic2IraEN%2bwMgYwfj6XCpDHyL</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000034</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.46</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>b96f4985-21d5-4100-bc6e-21cb0df60b6b</a:ETTN>
+                  <a:EnvelopeId>00b9d899-60c5-40d1-ba19-ec6b5b73f7a3</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:04.14</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=QL74qXH7YGayPQg9VAbgh6W1%2bypJZyBOEvi5XaiBSGKfanPQmORP17i33sPKt894QDr%2bkOseJ95smahJU3C3cJ9klDmT8sqT%2fyPKUhPqSvHsZ2tkK5sbgK%2bEX%2b5v7%2bAhULGigI7HbfEafvgYafnfXf%2fDSvOvQS5P</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000033</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.46</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>f741aa39-f730-4852-8375-c91a8cf97afa</a:ETTN>
+                  <a:EnvelopeId>150d5376-14aa-4f54-91ea-1ee26f340ea2</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:33:03.5</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=G6aWEBGcHrl61F8xXRFsRUctEYvWAy%2bkNjObtpS4BwsrnSJw73LSW5gcnMFJX7nfJdjow2A3SuCijc5skj5EkZBzP4lJD13%2b2YGzM%2bZnPyWO%2fBv%2fJjZHaYmBYDCdP%2bxxnB3westZXeHJnolO%2bT0b%2b27Swn0z7QVj</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000032</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.443</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>77ef6b85-51cc-4f5f-97ba-c717918210be</a:ETTN>
+                  <a:EnvelopeId>6d985cd1-d118-46ef-a92d-0a39cb677e5a</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:32:58.233</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=ilZ%2f44q4EL4zguiZPVhfSLUDlE6gUS%2fUpJHjJCtNLCa9DyK11FEpHBXK9a%2ftztosSopXPUvHs2scwuWDQgn1OlsYz5JlX6enBvpP2Q9GzpUsoZP9rTEpa9teOALDtP0kmr47S9fuV5VgEZTUbsRW3S3T4uMyYsSb</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000031</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.443</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>eda2abc9-0c20-42b3-8eed-0d1dcd2d07cf</a:ETTN>
+                  <a:EnvelopeId>7fdcb6d5-5dff-4858-9421-43a72faf77db</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:32:53.323</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=vOk8GBlGEDwaoMpqItc8BPdhhzmBd7KW0PMZSc5%2fDd5mGXcLRmjCZ49FcbvT0zhRXEUHqZ1GfS8REvTrKe865W0WBj%2bb2rQcygFrLa39N2w7fGYAdYKF6lW53wdaTr1hH8pLlJIV5m7Pzi6WeHRxxjS4uY63CJzh</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000030</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+               <a:Invoice>
+                  <a:AccountingCost i:nil="true"/>
+                  <a:ActualExportDate i:nil="true"/>
+                  <a:AdditionalDocumentReferences i:nil="true"/>
+                  <a:AliciBayiNo i:nil="true"/>
+                  <a:ApplicationResponseDescription/>
+                  <a:ApplicationResponseStatus i:nil="true"/>
+                  <a:ApprovalDate>2023-09-01T00:00:59.443</a:ApprovalDate>
+                  <a:ArchiveDate i:nil="true"/>
+                  <a:BankAccountList i:nil="true" xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+                  <a:CompanyBranchAddress i:nil="true"/>
+                  <a:CompanyVendorNumber i:nil="true"/>
+                  <a:CrossRate>0.0000</a:CrossRate>
+                  <a:CrossRateDate i:nil="true"/>
+                  <a:CurrencyCode>TRY</a:CurrencyCode>
+                  <a:Delivery i:nil="true"/>
+                  <a:DetailStatus i:nil="true"/>
+                  <a:DirectionDate i:nil="true"/>
+                  <a:DispatchList>
+                     <a:Dispatch>
+                        <a:DispatchDate>2023-08-24T00:00:00</a:DispatchDate>
+                        <a:DispatchNumber>A-24503</a:DispatchNumber>
+                     </a:Dispatch>
+                  </a:DispatchList>
+                  <a:ETTN>0502ea06-9f2f-489a-a035-b787f6141367</a:ETTN>
+                  <a:EnvelopeId>eff7f462-f6c0-4158-bd16-7423697888ee</a:EnvelopeId>
+                  <a:ExportReceiver i:nil="true"/>
+                  <a:ExportRegisteredReasonCode i:nil="true"/>
+                  <a:ExternalInvoiceCode/>
+                  <a:FinancialAccount i:nil="true"/>
+                  <a:GcbRegistrationNumber i:nil="true"/>
+                  <a:GtbReferenceNumber i:nil="true"/>
+                  <a:IdRepresentative>0</a:IdRepresentative>
+                  <a:InvoiceAdditionalIdentityInfo>
+                     <a:BranchNo/>
+                     <a:CommercialRegisterNo/>
+                     <a:CounterNo/>
+                     <a:CustomerNo>210</a:CustomerNo>
+                     <a:DistributorNo/>
+                     <a:EpdkNo/>
+                     <a:FarmerNo/>
+                     <a:FileNo/>
+                     <a:IntermediaryCorporationTag/>
+                     <a:IntermediaryCorporationVkn/>
+                     <a:ManufacturerNo/>
+                     <a:MersisNo/>
+                     <a:PasaportNo/>
+                     <a:PatientNo/>
+                     <a:PhoneNo/>
+                     <a:PlumbingNo/>
+                     <a:ProducerNo i:nil="true"/>
+                     <a:SellerNo/>
+                     <a:ServiceNo/>
+                     <a:SubscriberNo/>
+                     <a:TapdkNo/>
+                     <a:Tckn/>
+                     <a:Vkn>1234567801</a:Vkn>
+                  </a:InvoiceAdditionalIdentityInfo>
+                  <a:InvoiceAttachments i:nil="true"/>
+                  <a:InvoiceCreationDate>2023-08-24T14:32:48.43</a:InvoiceCreationDate>
+                  <a:InvoiceDate>2023-08-24T00:00:00</a:InvoiceDate>
+                  <a:InvoiceDetails i:nil="true"/>
+                  <a:InvoiceExpenses i:nil="true"/>
+                  <a:InvoiceExternalUrl>http://einvoiceapiturmobtest.luca.com.tr/api/Invoice/GetInvoicePdf?key=8fNf2gymO5LVOHKky9boYGQWDkcazTHp%2fuT63AXmYt7gaszld5AADlY96%2ff9x3weCYAeLwOgUuYqBP6mroBwpDP1C8PKmLJ13WTr2Q8QVmNW8uOFjtVu3pT%2f%2fJ%2bN9T%2fmCl5zo%2fZsb5gH3rYT9X%2f1mbwPrpJJNczn</a:InvoiceExternalUrl>
+                  <a:InvoiceHtml i:nil="true"/>
+                  <a:InvoiceNumber>BRT2023000000029</a:InvoiceNumber>
+                  <a:InvoicePdf i:nil="true"/>
+                  <a:InvoicePeriodEndDate i:nil="true"/>
+                  <a:InvoicePeriodStartDate i:nil="true"/>
+                  <a:InvoiceSenderAdditionalIdentityInfo i:nil="true"/>
+                  <a:InvoiceTotalTaxList/>
+                  <a:InvoiceType>SATIS</a:InvoiceType>
+                  <a:InvoiceXml i:nil="true"/>
+                  <a:IsArchived>false</a:IsArchived>
+                  <a:IsFreeOfCharge i:nil="true"/>
+                  <a:KismiIadeMi i:nil="true"/>
+                  <a:LastPaymentDate i:nil="true"/>
+                  <a:Notes xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+                     <b:string>Yalnız ÜÇYÜZELLİDOKUZ TL ONÜÇ Kr'dir deneme faturası</b:string>
+                  </a:Notes>
+                  <a:OrderDate>2023-08-24T00:00:00</a:OrderDate>
+                  <a:OrderNumber>AB123456</a:OrderNumber>
+                  <a:Payment i:nil="true"/>
+                  <a:PublicReceiver i:nil="true"/>
+                  <a:Receiver>
+                     <a:Address>
+                        <a:BoulevardAveneuStreetName/>
+                        <a:BuildingName i:nil="true"/>
+                        <a:BuildingNumber/>
+                        <a:CityCode>0</a:CityCode>
+                        <a:CityName/>
+                        <a:EMail/>
+                        <a:FaxNumber/>
+                        <a:PostalCode>0</a:PostalCode>
+                        <a:TaxOfficeCode>0</a:TaxOfficeCode>
+                        <a:TaxOfficeName/>
+                        <a:TelephoneNumber/>
+                        <a:TownCode>0</a:TownCode>
+                        <a:TownName/>
+                        <a:WebSite/>
+                     </a:Address>
+                     <a:ExternalReceiverCode i:nil="true"/>
+                     <a:InstallationNumber i:nil="true"/>
+                     <a:ReceiverName>LUCA YAZILIM</a:ReceiverName>
+                     <a:ReceiverTaxCode>1420552607</a:ReceiverTaxCode>
+                     <a:RecipientType>NONE</a:RecipientType>
+                     <a:SendingType>NONE</a:SendingType>
+                     <a:VendorNumber i:nil="true"/>
+                  </a:Receiver>
+                  <a:ReceiverBranchAddress i:nil="true"/>
+                  <a:ReceiverInboxTag>urn:mail:172defaultgb@luca.com.tr</a:ReceiverInboxTag>
+                  <a:ReceiverResponseDescription/>
+                  <a:RejectReason/>
+                  <a:RepresentativeParty i:nil="true"/>
+                  <a:ReturnInvoiceDate i:nil="true"/>
+                  <a:ReturnInvoiceETTN i:nil="true"/>
+                  <a:ReturnInvoiceNumber i:nil="true"/>
+                  <a:ReturnNote i:nil="true"/>
+                  <a:ScacCode i:nil="true"/>
+                  <a:ScenarioType>TICARIFATURA</a:ScenarioType>
+                  <a:Status>Otomatik_Onaylandi</a:Status>
+                  <a:SystemResponseDescription i:nil="true"/>
+                  <a:TaxExemptionReason i:nil="true"/>
+                  <a:TotalDiscountAmount>0.00</a:TotalDiscountAmount>
+                  <a:TotalLineExtensionAmount>359.13</a:TotalLineExtensionAmount>
+                  <a:TotalPayableAmount>359.13</a:TotalPayableAmount>
+                  <a:TotalTaxInclusiveAmount>0.00</a:TotalTaxInclusiveAmount>
+                  <a:TotalVATAmount>64.64</a:TotalVATAmount>
+                  <a:Tourist i:nil="true"/>
+                  <a:XsltTemplate i:nil="true"/>
+               </a:Invoice>
+            </a:Invoices>
+            <a:PagingResponse>
+               <a:PageNumber>1</a:PageNumber>
+               <a:RecordsPerPage>25</a:RecordsPerPage>
+               <a:TotalNumberOfPages>3</a:TotalNumberOfPages>
+               <a:TotalNumberOfRecords>53</a:TotalNumberOfRecords>
+            </a:PagingResponse>
+         </SearchInvoiceResult>
+      </SearchInvoiceResponse>
+   </s:Body>
+</s:Envelope>

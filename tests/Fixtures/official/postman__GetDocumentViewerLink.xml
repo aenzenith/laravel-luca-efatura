@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetDocumentViewerLink>
+         <tem:request>
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+            <eın:Ettn>28e9d84c-0dd8-4040-a20c-f9f70023cb73</eın:Ettn>
+            <!-- Incoming , Outgoing -->
+            <eın:InvoiceDirection>Outgoing</eın:InvoiceDirection>
+            <!-- EInvoice , EArchiveInvoice -->
+            <eın:InvoiceDocumentType>EInvoice</eın:InvoiceDocumentType>
+         </tem:request>
+      </tem:GetDocumentViewerLink>
+   </soapenv:Body>
+</soapenv:Envelope>

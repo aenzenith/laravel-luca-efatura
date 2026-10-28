@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SendInvoiceReply>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+            <!--Optional:-->
+            <eın:CompanyVendorNumber/>
+            <!--Optional:-->
+            <eın:InvoiceReplies>
+               <!--Zero or more repetitions:-->
+               <eın:InvoiceReply>
+                  <!--Optional:-->
+                  <eın:InvoiceETTN>c5808b99-6f9d-4054-8635-6ff559dd7078</eın:InvoiceETTN>
+                  <!--Optional:-->
+                  <eın:InvoiceResponse>KABUL</eın:InvoiceResponse>
+                  <!--Optional:-->
+                  <eın:InvoiceResponseDescription>FATURA KABUL EDİLDİ.</eın:InvoiceResponseDescription>
+               </eın:InvoiceReply>
+            </eın:InvoiceReplies>
+         </tem:request>
+      </tem:SendInvoiceReply>
+   </soapenv:Body>
+</soapenv:Envelope>

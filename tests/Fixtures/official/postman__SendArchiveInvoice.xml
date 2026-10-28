@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<tem:SendArchiveInvoice>
+			<!--Optional:-->
+			<tem:request>
+				<!--Optional:-->
+				<eın:ArchiveInvoices>
+					<!--Zero or more repetitions:-->
+					<eın:ArchiveInvoice>
+						<!--Optional:-->
+						<eın:CompanyBranchAddress>
+							<!--Optional:-->
+							<eın:BoulevardAveneuStreetName>dikmen</eın:BoulevardAveneuStreetName>
+							<!--Optional:-->
+							<eın:BuildingName>Merkez Apt</eın:BuildingName>
+							<!--Optional:-->
+							<eın:BuildingNumber>23</eın:BuildingNumber>
+							<!--Optional:-->
+							<eın:CityCode>06</eın:CityCode>
+							<!--Optional:-->
+							<eın:CityName>ANKARA</eın:CityName>
+							<!--Optional:-->
+							<eın:EMail>x</eın:EMail>
+							<!--Optional:-->
+						</eın:CompanyBranchAddress>
+						<!--Optional:-->
+						<eın:CrossRate>0</eın:CrossRate>
+						<!--Optional:-->
+						<eın:CurrencyCode>TRY</eın:CurrencyCode>
+						<!--Optional:-->
+						<eın:ExternalArchiveInvoiceCode>{{ExternalInvoiceCode}}</eın:ExternalArchiveInvoiceCode>
+						<!--Optional:-->
+						<eın:InvoiceDate>{{InvoiceDate}}</eın:InvoiceDate>
+						<!--Optional:-->
+						<eın:InvoiceDetails>
+							<!--Zero or more repetitions:-->
+							<eın:ArchiveInvoiceDetail>
+								<!--Optional:-->
+								<eın:CurrencyCode>TRY</eın:CurrencyCode>
+								<!--Optional:-->
+								<eın:DiscountAmount>10</eın:DiscountAmount>
+								<!--Optional:-->
+								<eın:DiscountRate>10</eın:DiscountRate>
+								<!--Optional:-->
+								<eın:LineExtensionAmount>90.00</eın:LineExtensionAmount>
+								<!--Optional:-->
+								<eın:Note>Fatura Satır Açıklama</eın:Note>
+								<eın:Product>
+									<eın:ExternalProductCode>s71719</eın:ExternalProductCode>
+									<!--Optional:-->
+									<eın:MeasureUnit>NIU</eın:MeasureUnit>
+									<!--Optional:-->
+									<eın:ProductCode>001</eın:ProductCode>
+									<!--Optional:-->
+									<eın:ProductName>BUĞDAY</eın:ProductName>
+									<!--Optional:-->
+									<eın:UnitPrice>100.00</eın:UnitPrice>
+								</eın:Product>
+								<eın:Quantity>1</eın:Quantity>
+								<eın:TaxExemptionReason>İstisna Diğer (350)</eın:TaxExemptionReason>
+								<eın:TaxExemptionReasonCode>350</eın:TaxExemptionReasonCode>
+								<eın:VATAmount>0.00</eın:VATAmount>
+								<eın:VATRate>0.00</eın:VATRate>
+							</eın:ArchiveInvoiceDetail>
+						</eın:InvoiceDetails>
+						<eın:InvoiceType>ISTISNA</eın:InvoiceType>
+						<!--Optional:-->
+						<!--Optional:-->
+						<eın:IsArchived>false</eın:IsArchived>
+						<!--Optional:-->
+						<!--Optional:-->
+						<eın:Notes>
+							<!--Zero or more repetitions:-->
+							<arr:string>Fatura Notları</arr:string>
+							<arr:string>Banka Hesap Bilgileri: TR987646456565465546656656</arr:string>
+							<arr:string>TEST E ARŞİV FATURASIDIR.</arr:string>
+						</eın:Notes>
+						<!--Optional:-->
+						<eın:OrderDate>2023-10-26</eın:OrderDate>
+						<!--Optional:-->
+						<eın:OrderNumber>00001</eın:OrderNumber>
+						<!--Optional:-->
+						<!--Optional:-->
+						<eın:Receiver>
+							<!--Optional:-->
+							<eın:Address>
+								<!--Optional:-->
+								<!--Optional:-->
+								<eın:CityCode>06</eın:CityCode>
+								<!--Optional:-->
+								<eın:CityName>ANKARA</eın:CityName>
+								<!--Optional:-->
+								<eın:EMail>entegratordestek@luca.com.tr</eın:EMail>
+							</eın:Address>
+							<!--Optional:-->
+							<eın:ReceiverName>ALIC ADI SOYADI</eın:ReceiverName>
+							<!--Optional:-->
+							<eın:ReceiverTaxCode>11111111111</eın:ReceiverTaxCode>
+							<!--Optional:-->
+							<eın:SendingType>KAGIT</eın:SendingType>
+							<!--Optional:-->
+						</eın:Receiver>
+						<!--Optional:-->
+						<eın:ReceiverBranchAddress>
+							<!--Optional:-->
+							<eın:CityCode>06</eın:CityCode>
+							<!--Optional:-->
+							<eın:CityName>ANKARA</eın:CityName>
+							<!--Optional:-->
+							<eın:EMail>entegratordestek@luca.com.tr</eın:EMail>
+						</eın:ReceiverBranchAddress>
+						<!--Optional:-->
+						<eın:SendMailAutomatically>false</eın:SendMailAutomatically>
+						<!--Optional:-->
+						<eın:TotalDiscountAmount>10</eın:TotalDiscountAmount>
+						<!--Optional:-->
+						<eın:TotalLineExtensionAmount>90.00</eın:TotalLineExtensionAmount>
+						<!--Optional:-->
+						<eın:TotalPayableAmount>90.00</eın:TotalPayableAmount>
+						<!--Optional:-->
+						<eın:TotalTaxInclusiveAmount>90.00</eın:TotalTaxInclusiveAmount>
+						<!--Optional:-->
+						<eın:TotalVATAmount>0</eın:TotalVATAmount>
+					</eın:ArchiveInvoice>
+				</eın:ArchiveInvoices>
+				<!--Optional:-->
+				<eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+				<!--Optional:-->
+			</tem:request>
+		</tem:SendArchiveInvoice>
+	</soapenv:Body>
+</soapenv:Envelope>

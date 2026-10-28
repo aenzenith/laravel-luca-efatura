@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetDespatchTaxPayer>
+         <!--Optional:-->
+         <tem:request>
+            <eın:TaxPayerTaxCode>1234567801</eın:TaxPayerTaxCode>
+         </tem:request>
+      </tem:GetDespatchTaxPayer>
+   </soapenv:Body>
+</soapenv:Envelope>

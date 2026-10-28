@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ein="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<tem:SearchInvoice>
+			<!--Optional:-->
+			<tem:request>
+				<!--Optional:-->
+				<eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+                <eın:Ettn>05a6680e-b7bd-4c12-a600-3201d3678d22</eın:Ettn>
+				<eın:InvoiceDirection>Outgoing</eın:InvoiceDirection>
+				<eın:MaxInvoiceDate>2026-04-01</eın:MaxInvoiceDate>
+				<eın:MinInvoiceDate>2026-01-11</eın:MinInvoiceDate>
+				<eın:PagingRequest>
+					<eın:PageNumber>1</eın:PageNumber>
+					<eın:RecordsPerPage>50</eın:RecordsPerPage>
+				</eın:PagingRequest>
+				<eın:ResultSet>
+					<eın:IsAdditionalTaxIncluded>false</eın:IsAdditionalTaxIncluded>
+					<eın:IsArchiveIncluded>true</eın:IsArchiveIncluded>
+					<eın:IsExternalUrlIncluded>true</eın:IsExternalUrlIncluded>
+					<eın:IsHtmlIncluded>false</eın:IsHtmlIncluded>
+					<eın:IsInvoiceDetailIncluded>true</eın:IsInvoiceDetailIncluded>
+					<eın:IsPDFIncluded>false</eın:IsPDFIncluded>
+                    <eın:IsXMLIncluded>true</eın:IsXMLIncluded>
+				</eın:ResultSet>
+			</tem:request>
+		</tem:SearchInvoice>
+	</soapenv:Body>
+</soapenv:Envelope>

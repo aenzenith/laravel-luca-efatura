@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SendESMMXml>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <eın:ESMM>{{XmlB64}}</eın:ESMM>
+         </tem:request>
+      </tem:SendESMMXml>
+   </soapenv:Body>
+</soapenv:Envelope>

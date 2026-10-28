@@ -1,0 +1,68 @@
+{
+    "name": "aenzenith/laravel-luca-efatura",
+    "description": "Laravel client for the TÜRMOB Luca e-Fatura web services (InvoiceService, AddressBookService, ProductService): e-Fatura, e-Arşiv, e-İrsaliye and e-SMM over SOAP, with a schema-driven envelope builder, multi-company scoping, tenant guards and a test fake. Laravel 12 and 13, PHP 8.2+.",
+    "keywords": ["laravel", "luca", "turmob", "isnet", "e-fatura", "e-arsiv", "e-irsaliye", "e-smm", "e-invoice", "soap", "turkey", "gib"],
+    "license": "MIT",
+    "homepage": "https://github.com/aenzenith/laravel-luca-efatura",
+    "support": {
+        "issues": "https://github.com/aenzenith/laravel-luca-efatura/issues",
+        "source": "https://github.com/aenzenith/laravel-luca-efatura"
+    },
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mustafa Sarı"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-xmlwriter": "*",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "nesbot/carbon": "^2.72|^3.0",
+        "psr/log": "^2.0|^3.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aenzenith\\LucaEFatura\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aenzenith\\LucaEFatura\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aenzenith\\LucaEFatura\\LucaServiceProvider"
+            ],
+            "aliases": {
+                "Luca": "Aenzenith\\LucaEFatura\\Facades\\Luca"
+            }
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "format": "pint",
+        "analyse": "phpstan analyse --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

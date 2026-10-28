@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:eın1="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model.DataTypes.Enums" xmlns:eın2="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model.DataModels">
+	<soapenv:Header />
+	<soapenv:Body>
+		<tem:SearchESMM>
+			<!--Optional:-->
+			<tem:request>
+				<!--Optional:-->
+				<eın:CompanyTaxCode>11111111111</eın:CompanyTaxCode>
+				<eın:Ettn>1340c059-3f9a-4aa6-a1a3-5753145651e3</eın:Ettn>
+				<eın:ResultSet>
+					<eın2:IsPDFIncluded>true</eın2:IsPDFIncluded>
+				</eın:ResultSet>
+				<eın:VNKTCKN>8810234738</eın:VNKTCKN>
+			</tem:request>
+		</tem:SearchESMM>
+	</soapenv:Body>
+</soapenv:Envelope>

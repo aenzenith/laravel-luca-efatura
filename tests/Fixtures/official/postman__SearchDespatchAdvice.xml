@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:eın="http://schemas.datacontract.org/2004/07/EInvoice.Service.Model" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:SearchDespatchAdvice>
+         <tem:request>
+            <eın:CompanyTaxCode>8810234738</eın:CompanyTaxCode>
+             <eın:DespatchAdviceDirection>Outgoing</eın:DespatchAdviceDirection>
+            <eın:MaxDespatchAdviceDate>2026-01-10</eın:MaxDespatchAdviceDate>
+            <eın:MinDespatchAdviceDate>2026-01-01</eın:MinDespatchAdviceDate>
+            <eın:PagingRequest>
+               <eın:PageNumber>1</eın:PageNumber>
+               <eın:RecordsPerPage>50</eın:RecordsPerPage>
+            </eın:PagingRequest>
+          <eın:ReceiverTaxCode></eın:ReceiverTaxCode>
+            <eın:ResultSet>
+               <eın:IsArchiveIncluded>false</eın:IsArchiveIncluded>
+               <eın:IsAttachmentIncluded>false</eın:IsAttachmentIncluded>
+               <eın:IsDespatchAdviceDetailIncluded>false</eın:IsDespatchAdviceDetailIncluded>
+               <eın:IsHtmlIncluded>false</eın:IsHtmlIncluded>
+               <eın:IsPDFIncluded>false</eın:IsPDFIncluded>
+               <eın:IsXMLIncluded>false</eın:IsXMLIncluded>
+            </eın:ResultSet>
+         </tem:request>
+      </tem:SearchDespatchAdvice>
+   </soapenv:Body>
+</soapenv:Envelope>
