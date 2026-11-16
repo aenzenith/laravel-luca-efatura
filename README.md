@@ -104,19 +104,6 @@ $fake->assertSent('SendArchiveInvoiceXml');
 
 Ayrıntılı kılavuz [docs/](docs/README.md) altındadır.
 
-## Doğrulanmamış kısımlar
-
-Paket Luca'nın yayımladığı 2022 WSDL içe aktarımı, 2023 arayüz dokümanları ve Luca'nın örnek
-istekleri (SoapUI / Postman, 2026) üzerine kuruludur. İstek tarafı bu örneklerin 40'ıyla birebir
-doğrulanır. Şunlar canlı servise karşı henüz denenmedi:
-
-- AddressBookService ve ProductService yanıt şekilleri (şemasız okunur, hiçbir alan atılmaz)
-- `GetDocumentViewerLink`, `ValidateUserCompany`, `GetCompanyVendor` yanıtları
-- Mükellef bulunamadı mesajının tam metni (`TaxPayers::isNotFoundMessage()`)
-
-Kayıtlı IP'li sunucuda `php artisan luca:schema` canlı WSDL'den güncel şemayı üretir; bkz.
-[Şema](docs/08-sema-ve-luca-schema.md).
-
 ## Lisans
 
 MIT
