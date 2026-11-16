@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/aenzenith/laravel-luca-efatura/compare/v0.1.0...v0.1.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* match Luca's "bulanamadı" spelling as taxpayer not found ([a1761d9](https://github.com/aenzenith/laravel-luca-efatura/commit/a1761d912a3dbe481e575b74e7948bd8044fb419))
+
 ## 0.1.0 (2026-10-28)
 
 
