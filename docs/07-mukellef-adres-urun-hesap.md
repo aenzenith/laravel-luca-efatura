@@ -15,8 +15,9 @@ Luca::taxPayers()->search('ÖRNEK', page: 1, perPage: 50);
 
 - Boş ya da 10/11 hane olmayan vergi numarası reddedilir: servis boş `TaxPayerTaxCode` ile **tüm**
   mükellefleri listeler.
-- Kayıtlı olmayan numara için servis `Result=Failed` döner. Hata mesajı "bulunamadı", "not found",
-  "kayıtlı değil" ya da "mevcut değil" içeriyorsa `find()` `null` döner; başka her hata
+- Kayıtlı olmayan numara için servis `Result=Failed` döner. Hata mesajı "bulunamadı" (Luca'nın
+  mesajlarında geçen "bulanamadı" yazımı dahil), "not found", "kayıtlı değil" ya da "mevcut değil"
+  içeriyorsa `find()` `null` döner; başka her hata
   `OperationFailedException` fırlatır. Kesinti "mükellef değil" diye okunursa e-Fatura yerine e-Arşiv
   kesilir; bu yüzden tanınmayan mesaj sessizce `null`'a çevrilmez.
 - Aynı VKN için birden fazla kayıt dönerse alias'lar birleştirilir.

@@ -32,14 +32,22 @@ final class CheckCommand extends Command
         $this->components->twoColumnDetail('Company', (string) ($connection->currentCompany() ?? '-'));
         $this->components->twoColumnDetail('Proxy', $connection->config->proxy ?? '-');
 
+        // The balance is read for a company; without one nothing is sent to Luca.
+        if ($connection->currentCompany() === null) {
+            $this->components->error('No company to check. Pass --company=<VKN or TCKN>, or set the company tax code of this connection (LUCA_COMPANY_TAX_CODE).');
+
+            return self::INVALID;
+        }
+
         try {
             $balance = $connection->account()->balance();
         } catch (ConnectionException $e) {
             $this->components->error('No response from Luca.');
             $this->line($e->getMessage());
             $this->newLine();
-            $this->line('Luca resets connections from IP addresses it has not registered. Compare the outgoing IP');
-            $this->line('of this server (curl -s https://api.ipify.org) with the one on your Luca application.');
+            $this->line('Luca serves only the IP addresses on your Luca application; others are reset or time out.');
+            $this->line('  curl -s https://api.ipify.org   outgoing IP of this server, compare it with the registered one');
+            $this->line('  curl -sI https://example.com    whether this server can open HTTPS connections at all');
 
             return self::FAILURE;
         } catch (LucaException $e) {

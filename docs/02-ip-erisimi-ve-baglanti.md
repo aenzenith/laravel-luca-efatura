@@ -8,7 +8,14 @@ ile Luca'ya bildirilir. Kayıtlı olmayan IP'den gelen bağlantı TCP seviyesind
 cURL error 56: Recv failure: Connection reset by peer
 ```
 
-Paket bu durumu `ConnectionException` olarak fırlatır; mesajda IP kaydı hatırlatılır.
+Bağlantının hiç kurulamaması da aynı sebepten olabilir; sunucunun dışarıya HTTPS çıkışı kapalıyken de
+bu hata alınır:
+
+```
+cURL error 28: Failed to connect to ... port 443 after 10002 ms: Timeout was reached
+```
+
+Paket iki durumu da `ConnectionException` olarak fırlatır; mesajda IP kaydı hatırlatılır.
 
 ## Kontrol
 
@@ -18,8 +25,10 @@ php artisan luca:check --company=1234567801 --connection=canli
 ```
 
 Komut bağlantıyı, ortamı, uç adresini, firmayı ve proxy'yi yazar, ardından `GetCompanyBalance`
-çağırır. Bağlantı kesilirse sunucunun çıkış IP'sini (`curl -s https://api.ipify.org`) başvurudaki
-IP ile karşılaştırın.
+çağırır. Bakiye bir firma adına sorgulanır: yapılandırmada firma (`LUCA_COMPANY_TAX_CODE`) yoksa
+`--company` verilir, ikisi de yoksa komut Luca'ya istek göndermeden durur. Bağlantı kurulamazsa
+sunucunun çıkış IP'sini (`curl -s https://api.ipify.org`) başvurudaki IP ile karşılaştırın ve
+sunucunun dışarıya HTTPS bağlantısı açabildiğini (`curl -sI https://example.com`) denetleyin.
 
 ## Geliştirme makinesinden erişim
 

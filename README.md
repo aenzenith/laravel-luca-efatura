@@ -34,7 +34,7 @@ LUCA_COMPANY_TAX_CODE=1234567801 # varsayılan firma VKN/TCKN (çok firmalı kul
 ```
 
 Luca'da kullanıcı adı ve parola yoktur: servisler isteği gönderen sunucunun **IP adresiyle** kimlik
-doğrular. Kayıtlı olmayan IP'den gelen bağlantı TCP seviyesinde kesilir. Kurulumdan sonra:
+doğrular. Kayıtlı olmayan IP'den gelen bağlantı kesilir ya da hiç kurulamaz. Kurulumdan sonra:
 
 ```bash
 php artisan luca:check

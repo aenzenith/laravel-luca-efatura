@@ -65,6 +65,7 @@ it('tells an unregistered taxpayer from a failed lookup', function (FakeResponse
         : expect($lookup()?->inboxTags)->toBe($expected === null ? null : explode(',', $expected));
 })->with([
     'not found' => [FakeResponse::failure('Mükellef bulunamadı.'), null],
+    'not found, Luca spelling' => [FakeResponse::failure('Mükellef bulanamadı.'), null],
     'not registered' => [FakeResponse::failure('Kayıtlı değil'), null],
     'empty success' => [FakeResponse::success(['TaxPayers' => []]), null],
     'other taxpayer' => [FakeResponse::success(['TaxPayers' => [['TaxPayerTaxCode' => '2222222222', 'InboxTagList' => ['urn:mail:defaultpk@b.com']]]]), null],

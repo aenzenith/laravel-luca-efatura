@@ -19,8 +19,10 @@ class TaxPayers extends Module
     /**
      * İşNet answers Result=Failed with one of these when the tax code is
      * not registered; every other failure is an error and is thrown.
+     * Luca's own messages also spell "bulunamadı" as "bulanamadı" (official
+     * SearchInvoice sample), so both spellings are matched.
      */
-    private const NOT_FOUND = '/bulunamad|not found|kay[ıi]tl[ıi] de[ğg]il|mevcut de[ğg]il/iu';
+    private const NOT_FOUND = '/bul[ua]namad|not found|kay[ıi]tl[ıi] de[ğg]il|mevcut de[ğg]il/iu';
 
     /**
      * The e-Fatura registration of a VKN/TCKN, or null when it is not
